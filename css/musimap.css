@@ -1,0 +1,81 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+    margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+    /* Colors are in hexadecimal: http://www.colorpicker.com/ */
+    color: #CC00AA;
+}
+
+/* this style exists to make it obvious that you've successfully linked
+the CSS to the page. feel free to remove it once the link is working. */
+body {
+    padding: 20px;
+    margin-left: 160px;
+}
+
+head {
+    padding: 20px;
+    margin-left: 160px;
+}
+
+.jumbotron {
+    position: relative;
+    background: none;
+}
+
+.jumbotron:after {
+    content:"";
+    background: url("http://lorempixel.com/1140/283");
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.page {
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #cdcdcd; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #0645AD;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #3366BB;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
